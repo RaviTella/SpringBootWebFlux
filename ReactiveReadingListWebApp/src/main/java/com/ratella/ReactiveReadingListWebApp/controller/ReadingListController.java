@@ -22,7 +22,8 @@ public class ReadingListController {
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
   @Autowired
-  public ReadingListController(ReadingListRepository readingListRepository, WebClient.Builder webClientBuilder) {
+  public ReadingListController(
+      ReadingListRepository readingListRepository, WebClient.Builder webClientBuilder) {
     this.readingListRepository = readingListRepository;
     this.webClient = webClientBuilder.baseUrl("http://localhost:9090").build();
   }
@@ -50,7 +51,6 @@ public class ReadingListController {
   @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
   public String deleteFromReadingList(@PathVariable String id) {
     readingListRepository.deleteById(id).subscribe();
-
     return "redirect:/readingList";
   }
 
@@ -78,7 +78,6 @@ public class ReadingListController {
   }
 
   public Flux<Recommendation> getRecommendations() {
-      return this.webClient.get().uri("recommendations")
-              .retrieve().bodyToFlux(Recommendation.class);
+    return this.webClient.get().uri("recommendations").retrieve().bodyToFlux(Recommendation.class);
   }
 }
