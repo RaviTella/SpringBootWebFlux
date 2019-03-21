@@ -16,7 +16,7 @@ Specifically, the following capabilities are demonstrated:
 ## First:
  * Java 8
  * maven
- * Create a Cosmos DB Mongo collection named "ReadingList"
+ * Create a Cosmos DB Mongo collection named "ReadingList". use /reader as the "Shard Key"
 
 ## Then:
 * Update the following properties in application.properties for ReactiveReadingListWebApp 
