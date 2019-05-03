@@ -23,7 +23,7 @@ Specifically, the following capabilities are demonstrated:
   - spring.data.mongodb.uri  
 * mvn spring-boot:run - from ReactiveRecommendationService the to start the REST API 
 * mvn spring-boot:run - from ReactiveReadingListWebApp to start the Web Application
-* Access the WebApp at http://localhost:8080/
+* Access the WebApp at http://localhost:8080/readingList
 
 ##### NOTE: You can also run the application against Mongo DB
 
